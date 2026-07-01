@@ -81,7 +81,12 @@ export function Footer() {
         <Container className="flex flex-col items-center justify-between gap-3 py-6 text-xs text-muted sm:flex-row">
           <p>© {new Date().getFullYear()} RITM Fitness Club. All rights reserved.</p>
           <div className="flex items-center gap-4">
-            <a href="#" className="transition-colors hover:text-foreground">
+            <a
+              href="https://www.instagram.com/ritm_fitnessclub"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-colors hover:text-foreground"
+            >
               Instagram
             </a>
             <a
