@@ -33,7 +33,7 @@ export function CTA() {
                 </Link>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center gap-2 rounded-full border border-white/40 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/10"
+                  className="inline-flex items-center justify-center gap-2 rounded-full border border-black/35 bg-transparent px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-black/10"
                 >
                   Contact us
                 </Link>

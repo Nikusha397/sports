@@ -25,7 +25,8 @@ const columns = [
 export function Footer() {
   return (
     <footer className="border-t border-border bg-background">
-      <Container className="grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-4">
+      {/* Hidden on mobile (< md); visible on tablet and up */}
+      <Container className="hidden gap-12 py-16 md:grid md:grid-cols-2 lg:grid-cols-4">
         {/* Brand + contact */}
         <div className="flex flex-col gap-4 lg:col-span-2">
           <Link
@@ -76,7 +77,7 @@ export function Footer() {
         ))}
       </Container>
 
-      <div className="border-t border-border">
+      <div className="md:border-t md:border-border">
         <Container className="flex flex-col items-center justify-between gap-3 py-6 text-xs text-muted sm:flex-row">
           <p>© {new Date().getFullYear()} RITM Fitness Club. All rights reserved.</p>
           <div className="flex items-center gap-4">

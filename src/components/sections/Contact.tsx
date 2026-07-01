@@ -7,6 +7,8 @@ import { Reveal } from "../ui/Reveal";
 
 type Errors = Partial<Record<"name" | "email" | "message", string>>;
 
+const MAPS_URL = "https://maps.app.goo.gl/kgVujm6PwjwSjbzE7";
+
 const info = [
   {
     label: "Location",
@@ -199,11 +201,13 @@ export function Contact({ showHeading = true }: { showHeading?: boolean }) {
                 ))}
               </div>
 
-              {/* Map placeholder */}
-              <div
-                role="img"
-                aria-label="Map location placeholder"
-                className="relative flex min-h-[200px] flex-1 items-center justify-center overflow-hidden rounded-xl border border-border bg-surface-2"
+              {/* Map placeholder — click opens Google Maps */}
+              <a
+                href={MAPS_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Open RITM Fitness Club location in Google Maps"
+                className="group relative flex min-h-[200px] flex-1 items-center justify-center overflow-hidden rounded-xl border border-border bg-surface-2 transition-colors hover:border-accent/50"
               >
                 <div
                   className="absolute inset-0"
@@ -212,14 +216,23 @@ export function Contact({ showHeading = true }: { showHeading?: boolean }) {
                       "repeating-linear-gradient(0deg, rgba(255,255,255,0.04) 0px, rgba(255,255,255,0.04) 1px, transparent 1px, transparent 28px), repeating-linear-gradient(90deg, rgba(255,255,255,0.04) 0px, rgba(255,255,255,0.04) 1px, transparent 1px, transparent 28px)",
                   }}
                 />
-                <span className="relative flex items-center gap-2 text-sm font-medium text-muted">
-                  <span className="relative flex h-2.5 w-2.5">
+                {/* glowing red location pin */}
+                <span className="relative flex flex-col items-center gap-3">
+                  <span className="relative flex h-4 w-4 items-center justify-center">
                     <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-75" />
-                    <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-accent" />
+                    <span className="relative inline-flex h-4 w-4 rounded-full bg-accent shadow-[0_0_14px_2px_var(--accent)]" />
                   </span>
-                  Map placeholder — Rustavi
+                  <span className="text-sm font-semibold tracking-tight text-foreground">
+                    RITM Fitness Club · Rustavi
+                  </span>
+                  <span className="inline-flex items-center gap-1 text-xs text-muted transition-colors group-hover:text-accent">
+                    Open in Google Maps
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M7 17 17 7M8 7h9v9" />
+                    </svg>
+                  </span>
                 </span>
-              </div>
+              </a>
             </div>
           </Reveal>
         </div>
