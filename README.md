@@ -1,25 +1,19 @@
-# Sport
+# Sports
 
-Sport is a web project built to provide a simple and user-friendly experience for browsing sports-related content.
+A sports website built with a focus on a clean design and a simple user experience. The project was created to practice web development and build a responsive interface.
 
-The project focuses on a clean layout, responsive design, and easy navigation.
+## Features
 
-## Tech Stack
+The website includes the features and pages implemented in the project.
 
-The technologies used in this project include the tools and frameworks configured in the repository.
+## Technologies
+
+See the project files for the technologies and dependencies used.
 
 ## Getting Started
 
-Clone the repository and install the dependencies:
+Clone the repository and install the required dependencies based on the project's configuration.
 
-```bash
-npm install
-```
+Run the development server using the appropriate command for the framework.
 
-Start the development server:
 
-```bash
-npm run dev
-```
-
-Open the local URL shown in the terminal to view the project.
